@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      706 字
+      746 字
     </span>
   
 
@@ -234,7 +234,7 @@
 <blockquote>
 <p>用户名.github.io</p>
 </blockquote>
-<p>注意用户名需要和你的github的用户名要一致。<br><img src="https://img-blog.csdnimg.cn/20210620111126197.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<p>注意用户名需要和你的github的用户名要一致。大小写也要一致<br><img src="https://img-blog.csdnimg.cn/20210620111126197.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 <h2 id="配置ssh"><a href="#配置ssh" class="headerlink" title="配置ssh"></a>配置ssh</h2><p>之前已经配置ssh的话就忽略这步骤<br>在gitbash 下输入这条语句</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">ssh<span class="hljs-literal">-keygen</span> <span class="hljs-literal">-t</span> rsa <span class="hljs-literal">-C</span> <span class="hljs-string">&quot;你注册的邮箱名&quot;</span><br></code></pre></td></tr></table></figure>
 <p>之后去寻找曾现的路径，打开id_rsa.pub文件复制ssh到github中。</p>
@@ -285,6 +285,10 @@
 <p>之后执行</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">hexo g<br>hexo s<br></code></pre></td></tr></table></figure>
 
+<p>注意：<br>需要添加REMAD.md在source文件夹下<br>之后在_config.yml里添加上传不要转换为html格式</p>
+<blockquote>
+<p>skip_render: README.md</p>
+</blockquote>
 <h2 id="上传部署"><a href="#上传部署" class="headerlink" title="上传部署"></a>上传部署</h2><p>（前提你的github仓库创建完成以及相应git的配置信息正确）</p>
 <p>先安装</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">npm install hexo<span class="hljs-literal">-deployer</span><span class="hljs-literal">-git</span> -<span class="hljs-literal">-save</span><br></code></pre></td></tr></table></figure>
@@ -298,7 +302,7 @@
 <h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>在hexo目录下，gitbash</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">hexo new ”博客名“<br></code></pre></td></tr></table></figure>
 <p>在source/_posts 下编写文本，支持md，然后再执行生成，上传</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">hexo <span class="hljs-literal">-g</span><br>hexo <span class="hljs-literal">-d</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell">hexo <span class="hljs-literal">-clean</span><br>hexo <span class="hljs-literal">-g</span><br>hexo <span class="hljs-literal">-d</span><br></code></pre></td></tr></table></figure>
 
 <p>即可</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其余的配置，主要查看主题的相应配置，不同主题配置也不同。<br>其实有些省略步骤，也有些不足，请直接提出来即可。<br>至于绑定域名以后再说。<br>本次主题应用的是如下</p>
