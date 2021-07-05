@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>简单了解maven</title>
+    <link href="/2021/07/06/2021-7-6-maven/"/>
+    <url>/2021/07/06/2021-7-6-maven/</url>
+    
+    <content type="html"><![CDATA[<p>简单了解maven相关的一些操作</p><span id="more"></span><h1 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h1><p>今天在运用maven的时候，出现了有些jar包无法下载。自己琢磨不透，所以请教了导师，导师说你可以在别的项目里通过搜索相同的jar包名称，利用idea的快捷键 ctrl+shift+f 来查找具体在哪个项目用到jar包，再利用maven进行install。</p><h1 id="maven的操作"><a href="#maven的操作" class="headerlink" title="maven的操作"></a>maven的操作</h1><ol><li><p>install</p><p>指的是将这里的jar包依赖下载到本地。之后本地新建项目等都不会再获取远程仓库，而利用本地仓库。</p></li></ol><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>项目管理工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>maven</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>React核心概念</title>
     <link href="/2021/06/26/2021-6-26-React-base/"/>
     <url>/2021/06/26/2021-6-26-React-base/</url>
