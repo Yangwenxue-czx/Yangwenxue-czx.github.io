@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>2021-7-7-postman</title>
+    <link href="/2021/07/07/2021-7-7-postman/"/>
+    <url>/2021/07/07/2021-7-7-postman/</url>
+    
+    <content type="html"><![CDATA[<p>简单探讨一下利用postman测试需要登陆的接口</p><span id="more"></span><h3 id="get和post的请求的不同"><a href="#get和post的请求的不同" class="headerlink" title="get和post的请求的不同"></a>get和post的请求的不同</h3><ol><li><p>get</p><p>只能进行parm进行传参数，不允许利用请求体去请求，重要的是@RequestParm 是基于参数的，不允许一个请求体。</p></li><li><p>post</p><p>这种参数和表单数据都可以进行请求。</p></li></ol><h3 id="需要登陆请求的解决方法"><a href="#需要登陆请求的解决方法" class="headerlink" title="需要登陆请求的解决方法"></a>需要登陆请求的解决方法</h3><ol><li>​    首先要了解，登录后会给服务传什么值，一般会存在cookier或者存在请求头上。一般为Authorization 这样的key值，通过请求头添加即可</li></ol><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>一般要绕过请求，则进行登陆后查看请求头或者cookie，附带相应的值即可。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>测试接口</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>postman</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>简单了解maven</title>
     <link href="/2021/07/06/2021-7-6-maven/"/>
     <url>/2021/07/06/2021-7-6-maven/</url>
