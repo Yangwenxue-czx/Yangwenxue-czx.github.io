@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>idea方便使用</title>
+    <link href="/2021/07/07/2021-7-7-idea/"/>
+    <url>/2021/07/07/2021-7-7-idea/</url>
+    
+    <content type="html"><![CDATA[<p>现在基本idea是主流了，所以对此idea而言，还有很多快捷键和插件可以帮助自己能够更加顺应开发速度。此文来记录自己常用的插件和快捷键。</p><span id="more"></span><h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><table><thead><tr><th>快捷键</th><th>说明</th></tr></thead><tbody><tr><td>ctrl + shift + f</td><td>快速查找全路径下的（全局），支持过滤操作（windwos10下的热键会冲突，所以需要更改。）</td></tr><tr><td>ctrl + shift + r</td><td>快速查找全路径下的符合信息，并支持替换</td></tr><tr><td>双击shift</td><td>也是全局搜索的一种</td></tr><tr><td>ctrl+shift+[</td><td>切换项目窗口，对多项目分布式有很好的操作</td></tr></tbody></table><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><table><thead><tr><th>lombok</th><th>有些项目默认装置的lombok，所以装插件很有好处</th></tr></thead><tbody><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>未完，待续</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>开发工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>idea</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>了解postman绕过登录</title>
     <link href="/2021/07/07/2021-7-7-postman/"/>
     <url>/2021/07/07/2021-7-7-postman/</url>
