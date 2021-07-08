@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      174 字
+      224 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -240,7 +240,10 @@
 </li>
 </ol>
 <h3 id="需要登陆请求的解决方法"><a href="#需要登陆请求的解决方法" class="headerlink" title="需要登陆请求的解决方法"></a>需要登陆请求的解决方法</h3><ol>
-<li>​    首先要了解，登录后会给服务传什么值，一般会存在cookier或者存在请求头上。一般为Authorization 这样的key值，通过请求头添加即可</li>
+<li><p>​    首先要了解，登录后会给服务传什么值，一般会存在cookier或者存在请求头上。一般为Authorization 这样的key值，通过请求头添加即可</p>
+</li>
+<li><p>post请求下的@RequestBody的传送方式，不用改为json数据， 因为@RequestBody本身封装了json，只需要传送json格式的数据即可，list就是数据[],对象就是{}即可。</p>
+</li>
 </ol>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>一般要绕过请求，则进行登陆后查看请求头或者cookie，附带相应的值即可。</p>
 
