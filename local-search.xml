@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>2021-7-20-Objects.equals和CollectionUtils.isEmpty</title>
+    <link href="/2021/07/20/2021-7-20-java/"/>
+    <url>/2021/07/20/2021-7-20-java/</url>
+    
+    <content type="html"><![CDATA[<p>今天探讨一下，equals和Objects.equals。为什么会提到这个呢？原因是在实习的过程中遇过编码中很少使用equals去做比较，而是大量采用Objects.equals，其实目的是基于减少null指针错误的出现。一般编码中，会考虑到很多方面，大多是对一个获取数据对象等进行判断空对象的存在。</p><span id="more"></span><h1 id="equals与Objects-equals的区别"><a href="#equals与Objects-equals的区别" class="headerlink" title="equals与Objects.equals的区别"></a>equals与Objects.equals的区别</h1><ul><li><p>a.equals(b),当a出现null时，编译器会直接报null指针异常，而当b等于null，a不等于null时，会返回false，这样的情况下，当a出现null时直接报错而不直接运行后面代码，</p></li><li><p>当你判断两个都为非空时，就可以用Objects.equals(a,b),这种情况下，当a与b都等于null时，会返回true的，而当一个为null时，会返回false</p></li><li><p>两种情况而言，objects.equals更好了防止null指针对程序出错的异常，通常情况下，都会去编写一个检验类，去检验可能出现null指针异常的返回数据类型，类似从数据库查询出来的情况下，要考虑空数据的情况，和对一些dto而言，也要考虑null指针，特别是对集合而言,用一下工具类去判断。</p></li><li><p>附源码：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java">* <span class="hljs-meta">@since</span> <span class="hljs-number">1.7</span><br> */<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Objects</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Objects</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> AssertionError(<span class="hljs-string">&quot;No java.util.Objects instances for you!&quot;</span>);<br>    &#125;<br> <br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * Returns &#123;<span class="hljs-doctag">@code</span> true&#125; if the arguments are equal to each other</span><br><span class="hljs-comment">     * and &#123;<span class="hljs-doctag">@code</span> false&#125; otherwise.</span><br><span class="hljs-comment">     * Consequently, if both arguments are &#123;<span class="hljs-doctag">@code</span> null&#125;, &#123;<span class="hljs-doctag">@code</span> true&#125;</span><br><span class="hljs-comment">     * is returned and if exactly one argument is &#123;<span class="hljs-doctag">@code</span> null&#125;, &#123;<span class="hljs-doctag">@code</span></span><br><span class="hljs-comment">     * false&#125; is returned.  Otherwise, equality is determined by using</span><br><span class="hljs-comment">     * the &#123;<span class="hljs-doctag">@link</span> Object#equals equals&#125; method of the first</span><br><span class="hljs-comment">     * argument.</span><br><span class="hljs-comment">     *</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> a an object</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> b an object to be compared with &#123;<span class="hljs-doctag">@code</span> a&#125; for equality</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span> &#123;<span class="hljs-doctag">@code</span> true&#125; if the arguments are equal to each other</span><br><span class="hljs-comment">     * and &#123;<span class="hljs-doctag">@code</span> false&#125; otherwise</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@see</span> Object#equals(Object)</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object a, Object b)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> (a == b) || (a != <span class="hljs-keyword">null</span> &amp;&amp; a.equals(b));<br>    &#125;<br></code></pre></td></tr></table></figure></li></ul><h1 id="CollectionUtils-isEmpty"><a href="#CollectionUtils-isEmpty" class="headerlink" title="CollectionUtils.isEmpty"></a>CollectionUtils.isEmpty</h1><ul><li><p>CollectionUtils是对集合的一个包装工具类，里面富含了好多方法，在对数据库查询出来的实体类，封装为dto之后，需要对集合类型的数据进行获取进行判断，防止null指针之后对集合进行其余操作而产生的报错。</p></li><li><p>CollectionUtils.isEmpty(),使用该工具类对集合进行空判断，为了防止之后对集合进行操作时报null指针的异常。</p></li><li><p>附源码：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isEmpty</span><span class="hljs-params">(Collection coll)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> coll == <span class="hljs-keyword">null</span> || coll.isEmpty();<br>    &#125;<br></code></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程语言</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>idea方便使用</title>
     <link href="/2021/07/07/2021-7-7-idea/"/>
     <url>/2021/07/07/2021-7-7-idea/</url>
