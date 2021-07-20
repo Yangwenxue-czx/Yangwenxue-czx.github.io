@@ -18,7 +18,7 @@
   <meta name="author" content="Chen_zx">
   <meta name="keywords" content="">
   
-  <title>2021-7-20-Objects.equals和CollectionUtils.isEmpty - Chen_</title>
+  <title>Objects.equals、CollectionUtils.isEmpty、java工具类 - Chen_</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="2021-7-20-Objects.equals和CollectionUtils.isEmpty">
+            <span class="h2" id="subtitle" title="Objects.equals、CollectionUtils.isEmpty、java工具类">
               
             </span>
 
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      619 字
+      690 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      9
        分钟
     </span>
   
@@ -225,7 +225,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">2021-7-20-Objects.equals和CollectionUtils.isEmpty</h1>
+            <h1 style="display: none">Objects.equals、CollectionUtils.isEmpty、java工具类</h1>
             
             <div class="markdown-body">
               <p>今天探讨一下，equals和Objects.equals。为什么会提到这个呢？原因是在实习的过程中遇过编码中很少使用equals去做比较，而是大量采用Objects.equals，其实目的是基于减少null指针错误的出现。一般编码中，会考虑到很多方面，大多是对一个获取数据对象等进行判断空对象的存在。</p>
@@ -247,8 +247,33 @@
 <li><p>CollectionUtils.isEmpty(),使用该工具类对集合进行空判断，为了防止之后对集合进行操作时报null指针的异常。</p>
 </li>
 <li><p>附源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isEmpty</span><span class="hljs-params">(Collection coll)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> coll == <span class="hljs-keyword">null</span> || coll.isEmpty();<br>    &#125;<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isEmpty</span><span class="hljs-params">(Collection coll)</span> </span>&#123;<br>     <span class="hljs-keyword">return</span> coll == <span class="hljs-keyword">null</span> || coll.isEmpty();<br> &#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
+<h1 id="java工具类"><a href="#java工具类" class="headerlink" title="java工具类"></a>java工具类</h1><ol>
+<li><p>String.format(字符串,参数)</p>
+<p>该类的跟python的字符串映射很像，可以用[%s]替代相应的参数，达到拼接字符串的效果。</p>
+<table>
+<thead>
+<tr>
+<th>格式化字符串</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%s</td>
+<td>格式化字符串</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>整数类型（十进制）</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>浮点类型</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
 
             </div>
             <hr>
