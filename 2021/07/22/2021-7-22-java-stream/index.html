@@ -239,25 +239,7 @@
 <h2 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h2><ul>
 <li>commsumer</li>
 </ul>
-<p>​<br>    @FunctionalInterface<br>    public interface Consumer<T> {<br>    /**<br>     * Performs this operation on the given argument.<br>     *<br>     * @param t the input argument<br>     */<br>    void accept(T t);</p>
-<pre><code>/**
- * Returns a composed &#123;@code Consumer&#125; that performs, in sequence, this
- * operation followed by the &#123;@code after&#125; operation. If performing either
- * operation throws an exception, it is relayed to the caller of the
- * composed operation.  If performing this operation throws an exception,
- * the &#123;@code after&#125; operation will not be performed.
- *
- * @param after the operation to perform after this operation
- * @return a composed &#123;@code Consumer&#125; that performs in sequence this
- * operation followed by the &#123;@code after&#125; operation
- * @throws NullPointerException if &#123;@code after&#125; is null
- */
-default Consumer&lt;T&gt; andThen(Consumer&lt;? super T&gt; after) &#123;
-    Objects.requireNonNull(after);
-    return (T t) -&gt; &#123; accept(t); after.accept(t); &#125;;
-&#125;
-&#125;
-</code></pre>
+<p>​<br>​    @FunctionalInterface<br>​    public interface Consumer<T> {<br>​    /**<br>​     * Performs this operation on the given argument.<br>​     *<br>​     * @param t the input argument<br>​     <em>/<br>​    void accept(T t);<br>​<br>    /</em>*<br>     * Returns a composed {@code Consumer} that performs, in sequence, this<br>     * operation followed by the {@code after} operation. If performing either<br>     * operation throws an exception, it is relayed to the caller of the<br>     * composed operation.  If performing this operation throws an exception,<br>     * the {@code after} operation will not be performed.<br>     *<br>     * @param after the operation to perform after this operation<br>     * @return a composed {@code Consumer} that performs in sequence this<br>     * operation followed by the {@code after} operation<br>     * @throws NullPointerException if {@code after} is null<br>     */<br>    default Consumer<T> andThen(Consumer&lt;? super T&gt; after) {<br>        Objects.requireNonNull(after);<br>        return (T t) -&gt; { accept(t); after.accept(t); };<br>    }<br>    }</p>
 <ul>
 <li>predicate</li>
 </ul>
@@ -323,7 +305,7 @@ default Consumer&lt;T&gt; andThen(Consumer&lt;? super T&gt; after) &#123;
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+                      <a class="hover-with-bg" href="/categories/java/">java</a>
                     
                   </div>
                 
@@ -331,7 +313,7 @@ default Consumer&lt;T&gt; andThen(Consumer&lt;? super T&gt; after) &#123;
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/java-stream%E6%B5%81/">java.stream流</a>
+                      <a class="hover-with-bg" href="/tags/stream%E6%B5%81/">stream流</a>
                     
                   </div>
                 
