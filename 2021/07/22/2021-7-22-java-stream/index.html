@@ -239,16 +239,8 @@
 <h2 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h2><ul>
 <li>commsumer</li>
 </ul>
-<pre><code>@FunctionalInterface
-public interface Consumer&lt;T&gt; &#123;
-/**
- * Performs this operation on the given argument.
- *
- * @param t the input argument
- */
-void accept(T t);
-
-/**
+<p>​<br>    @FunctionalInterface<br>    public interface Consumer<T> {<br>    /**<br>     * Performs this operation on the given argument.<br>     *<br>     * @param t the input argument<br>     */<br>    void accept(T t);</p>
+<pre><code>/**
  * Returns a composed &#123;@code Consumer&#125; that performs, in sequence, this
  * operation followed by the &#123;@code after&#125; operation. If performing either
  * operation throws an exception, it is relayed to the caller of the
@@ -355,6 +347,12 @@ default Consumer&lt;T&gt; andThen(Consumer&lt;? super T&gt; after) &#123;
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/07/23/2021-7-23-sxssfWorkBook/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">sxssfWorkBook</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
