@@ -182,6 +182,173 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/07/27/2021-7-27-sql%E6%9F%A5%E8%AF%A2%E4%B8%87%E7%BA%A7%E6%95%B0%E6%8D%AE%E4%BC%98%E5%8C%96/" target="_self">
+          sql查询万级数据优化
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/27/2021-7-27-sql%E6%9F%A5%E8%AF%A2%E4%B8%87%E7%BA%A7%E6%95%B0%E6%8D%AE%E4%BC%98%E5%8C%96/" target="_self">
+          
+          
+            
+          
+          今天点击分页的时候，点击到86363页，出现了系统在转圈圈赚了快一分钟，寻思着以为电脑坏了，仔细一看，竟是代码的问题，于是乎请教导师之后。emmm。看来是我见识短浅了。为了提高系统的响应能力，不得不进行优化sql处理应对万级数据了。
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-27 07:21" pubdate>
+              2021-07-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/mysql/">mysql</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/26/2021-7-26-%E6%95%B0%E6%8D%AE%E5%BA%93mysql-redis%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF/" target="_self">
+          数据库mysql-redis链接错误
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/26/2021-7-26-%E6%95%B0%E6%8D%AE%E5%BA%93mysql-redis%E9%93%BE%E6%8E%A5%E9%94%99%E8%AF%AF/" target="_self">
+          
+          
+            
+          
+          
+
+什么？搭建的数据库朋友连接不上了？其实我一点也不想搞这些系统，之前说可以用dokcer，虽然说是方便，但是要更改里面的配置文件就要深挖。所以就自己装了
+问题首先是navicat连接数据库的问题。出现2013
+原因如下：
+mysql8的加密方式是不同以往版本的，所以要更新一下权限
+接着出现连接不是，那是腾讯云服务器并没有开启端口，但这样也有方法进入
+首先
+
+在主机填写mysql的用户民和密码，主
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-26 22:39" pubdate>
+              2021-07-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/mysql/">mysql</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/26/2021-7-26-sql%E4%BC%98%E5%8C%96/" target="_self">
+          sql优化
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/07/26/2021-7-26-sql%E4%BC%98%E5%8C%96/" target="_self">
+          
+          
+            
+          
+          
+
+今天无聊观看代码的时候，发现了一串查询分了两次去查询数据库，寻思着想着一次查询不行吗？就直接跟着代码，体会到sql优化对编程来说有多重要，因为提高的不止一点点。
+@TOC
+sql语句优化索引1select * from user limit 1000000,1000
+
+从数据库中豪取一百万数据开始后的1000条数据，你看看要多久，试了以下大概30s以上。
+换种思路
+1select id fro
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-26 06:56" pubdate>
+              2021-07-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/mysql/">mysql</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/07/25/2021-7-25-wx-openid/" target="_self">
           如何获取wx_openid
         </a>
@@ -519,163 +686,6 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/postman/">postman</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/06/2021-7-6-maven/" target="_self">
-          简单了解maven
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/06/2021-7-6-maven/" target="_self">
-          
-          
-            
-          
-          简单了解maven相关的一些操作
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-06 06:29" pubdate>
-              2021-07-06
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">版本管理</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/maven/">maven</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/26/2021-6-26-React-base/" target="_self">
-          React核心概念
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/26/2021-6-26-React-base/" target="_self">
-          
-          
-            
-          
-          新学习方式学习React
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-26 15:29" pubdate>
-              2021-06-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/">前端框架</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/React/">React</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/25/2021-6-25-quickly-develop/" target="_self">
-          快速开发网站资源
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/25/2021-6-25-quickly-develop/" target="_self">
-          
-          
-            
-          
-          快速开发网站
-简介：
-本次博客是对观看鱼皮的快速开发网站视频来记录其中一些相应的资源链接。视频链接如下
-
-🔥用这些技术开发网站能事半功倍！来看看你用过没_哔哩哔哩_bilibili
-
-
-
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-25 20:38" pubdate>
-              2021-06-25
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%B5%84%E6%BA%90/">资源</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E7%BD%91%E7%AB%99/">快速开发网站</a>
             
           </div>
         
