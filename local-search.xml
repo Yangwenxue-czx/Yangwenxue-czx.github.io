@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>windows关闭端口</title>
+    <link href="/2021/11/02/2021-11-2-windows%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/"/>
+    <url>/2021/11/02/2021-11-2-windows%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/</url>
+    
+    <content type="html"><![CDATA[<p>@<a href="%E8%BF%99%E9%87%8C%E5%86%99%E7%9B%AE%E5%BD%95%E6%A0%87%E9%A2%98">TOC</a></p><h1 id="什么时候需要关闭"><a href="#什么时候需要关闭" class="headerlink" title="什么时候需要关闭"></a>什么时候需要关闭</h1><p>一般在一些程序占用了端口号的时候，可以采用让运行的程序修改 端口号，但有时会出现idea卡死的时候，再次重新启动idea并开启程序会出现端口号被占用的问题。</p><h1 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h1><p>netstat -ano | findstr 端口号<br><img src="https://img-blog.csdnimg.cn/cada30cf665948c593191fd334b3d97e.png" alt="在这里插入图片描述"><br>杀死pid为4504<br>taskkill  -pid 4504 -F<br><img src="https://img-blog.csdnimg.cn/056669a29259440bb94f73f9fb02b568.png" alt="在这里插入图片描述"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>操作系统</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>获取包下所有的枚举类值</title>
     <link href="/2021/08/10/2021-8-10-%E8%8E%B7%E5%8F%96%E5%8C%85%E4%B8%8B%E6%89%80%E6%9C%89%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%80%BC/"/>
     <url>/2021/08/10/2021-8-10-%E8%8E%B7%E5%8F%96%E5%8C%85%E4%B8%8B%E6%89%80%E6%9C%89%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%80%BC/</url>

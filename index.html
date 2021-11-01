@@ -182,6 +182,59 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/11/02/2021-11-2-windows%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/" target="_self">
+          windows关闭端口
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/11/02/2021-11-2-windows%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3/" target="_self">
+          
+          
+            
+          
+          @TOC
+什么时候需要关闭一般在一些程序占用了端口号的时候，可以采用让运行的程序修改 端口号，但有时会出现idea卡死的时候，再次重新启动idea并开启程序会出现端口号被占用的问题。
+实践netstat -ano | findstr 端口号杀死pid为4504taskkill  -pid 4504 -F
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-11-02 07:19" pubdate>
+              2021-11-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/windows/">windows</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/08/10/2021-8-10-%E8%8E%B7%E5%8F%96%E5%8C%85%E4%B8%8B%E6%89%80%E6%9C%89%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%80%BC/" target="_self">
           获取包下所有的枚举类值
         </a>
@@ -636,56 +689,6 @@ sql语句优化索引1select * from user limit 1000000,1000
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/stream%E6%B5%81/">stream流</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/20/2021-7-20-java/" target="_self">
-          Objects.equals、CollectionUtils.isEmpty、java工具类
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/20/2021-7-20-java/" target="_self">
-          
-          
-            
-          
-          今天探讨一下，equals和Objects.equals。为什么会提到这个呢？原因是在实习的过程中遇过编码中很少使用equals去做比较，而是大量采用Objects.equals，其实目的是基于减少null指针错误的出现。一般编码中，会考虑到很多方面，大多是对一个获取数据对象等进行判断空对象的存在。
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-20 07:26" pubdate>
-              2021-07-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/java/">java</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/java%E5%B7%A5%E5%85%B7%E7%B1%BB/">java工具类</a>
             
           </div>
         
