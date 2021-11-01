@@ -14,7 +14,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="window如何关闭端口">
   <meta name="author" content="Chen_zx">
   <meta name="keywords" content="">
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      91 字
+      98 字
     </span>
   
 
@@ -228,7 +228,10 @@
             <h1 style="display: none">windows关闭端口</h1>
             
             <div class="markdown-body">
-              <p>@<a href="%E8%BF%99%E9%87%8C%E5%86%99%E7%9B%AE%E5%BD%95%E6%A0%87%E9%A2%98">TOC</a></p>
+              <p>window如何关闭端口</p>
+<span id="more"></span>
+
+<p>@<a href="%E8%BF%99%E9%87%8C%E5%86%99%E7%9B%AE%E5%BD%95%E6%A0%87%E9%A2%98">TOC</a></p>
 <h1 id="什么时候需要关闭"><a href="#什么时候需要关闭" class="headerlink" title="什么时候需要关闭"></a>什么时候需要关闭</h1><p>一般在一些程序占用了端口号的时候，可以采用让运行的程序修改 端口号，但有时会出现idea卡死的时候，再次重新启动idea并开启程序会出现端口号被占用的问题。</p>
 <h1 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h1><p>netstat -ano | findstr 端口号<br><img src="https://img-blog.csdnimg.cn/cada30cf665948c593191fd334b3d97e.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>杀死pid为4504<br>taskkill  -pid 4504 -F<br><img src="https://img-blog.csdnimg.cn/056669a29259440bb94f73f9fb02b568.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
 
